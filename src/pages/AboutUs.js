@@ -1,13 +1,13 @@
 
 import { useContext, useState } from 'react'
-import { WaedContext } from '../hooks/waedContext'
+import { userContext } from '../hooks/userContext'
 import {ADD} from '../hooks/actions'
 
 function AboutUs() {
     const [name, setName] = useState()
     const [id, setid] = useState()
     const [key, setKey] = useState()
-    const { state, dispatch } = useContext(WaedContext)
+    const { state, dispatch } = useContext(userContext)
 
     const setNewstate = (obj) => {
         const { name, id } = obj

@@ -8,7 +8,9 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import Header from "./components/Header";
-import { WaedContext } from './hooks/waedContext'
+import Grid from "./pages/Grid";
+import StateCard from "./pages/stateCard";
+import { userContext } from './hooks/userContext'
 import { ADD, RESET, REEM } from './hooks/actions'
 
 const initState = { employee: { name: 'waed', id: '1' } }
@@ -46,9 +48,8 @@ function App() {
      });
    } */
 
-
   return (
-    <WaedContext.Provider value={{ state, dispatch }}>
+    <userContext.Provider value={{ state, dispatch }}>
       <BrowserRouter>
         <Header></Header>
         <Switch>
@@ -61,9 +62,15 @@ function App() {
           <Route path='/contactUs'>
             <ContactUs />
           </Route>
+          <Route path='/grid'>
+            <Grid />
+          </Route>
+          <Route path='/stateCard'>
+            <StateCard />
+          </Route>
         </Switch>
       </BrowserRouter>
-    </WaedContext.Provider>
+    </userContext.Provider>
 
   );
 }

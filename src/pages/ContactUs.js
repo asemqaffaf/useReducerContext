@@ -1,10 +1,10 @@
 import {useContext} from 'react'
-import {WaedContext} from '../hooks/waedContext'
+import {userContext} from '../hooks/userContext'
 import {REEM} from '../hooks/actions'
 
 function ContactUs() {
 
-const {state, dispatch}=useContext(WaedContext);
+const {state, dispatch}=useContext(userContext);
 
 const handelClick=()=>{
     dispatch({type:REEM})

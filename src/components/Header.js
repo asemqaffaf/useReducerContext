@@ -21,6 +21,17 @@ const Header = () => {
                        Contact-Us
             </p>
             </Link>
+            <Link to='/grid'> 
+            <p>
+                       Grid
+            </p>
+            </Link>
+            <Link to='/stateCard'> 
+            <p>
+            stateCard
+            </p>
+            </Link>
+            
 
         </div>
     );
